@@ -13,12 +13,37 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
+    <Button
+        android:id="@+id/buttonShip3"
+        android:layout_width="105dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/buttonShip2"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/buttonShip1"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/buttonShip2"
+        android:layout_alignStart="@+id/buttonShip2"
+        android:text="3" />
+
+    <Button
+        android:id="@+id/buttonShip2"
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="18dp"
+        android:text="2" />
+
     <include
         layout="@layout/battle_field_layout"
         android:layout_width="260dp"
-        android:layout_above="@+id/buttonReady"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="116dp" />
+        android:layout_alignParentTop="true" />
 
     <Button
         android:id="@+id/buttonReady"
