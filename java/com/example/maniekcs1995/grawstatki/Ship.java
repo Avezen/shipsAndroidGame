@@ -6,11 +6,10 @@ public class Ship implements Serializable{
 
     int x, y, x2, y2;
 
-    public Ship (int x, int y, int x2, int y2) {
+    public Ship (int x, int y) {
         this.x = x;
         this.y = y;
-        this.x2 =x2;
-        this.y2 = y2;
+
     }
 
 
@@ -23,11 +22,5 @@ public class Ship implements Serializable{
         return y;
     }
 
-    public int getX2() {
-        return x2;
-    }
 
-    public int getY2() {
-        return y2;
-    }
 }

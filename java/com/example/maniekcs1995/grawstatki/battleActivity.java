@@ -16,7 +16,9 @@ public class battleActivity extends AppCompatActivity {
 
 
 
-        Toast.makeText(battleActivity.this, String.valueOf(prepareBattleActivity.ships1.get(0).getX()) + " " + String.valueOf(prepareBattleActivity.ships1.get(0).getY()) + "drugi przycisk : "
-                + String.valueOf(prepareBattleActivity.ships1.get(0).getX2()) + " " + String.valueOf(prepareBattleActivity.ships1.get(0).getY2()), Toast.LENGTH_SHORT).show();
+        Toast.makeText(battleActivity.this, "Statek nr1: " +String.valueOf(prepareBattleActivity.ships1.get(0).getX()) + String.valueOf(prepareBattleActivity.ships1.get(0).getY())
+                + "Statek nr2: " +String.valueOf(prepareBattleActivity.ships1.get(1).getX()) + String.valueOf(prepareBattleActivity.ships1.get(1).getY())
+                + "Statek nr3: " +String.valueOf(prepareBattleActivity.ships1.get(2).getX()) + String.valueOf(prepareBattleActivity.ships1.get(2).getY())
+                , Toast.LENGTH_SHORT).show();
     }
 }
