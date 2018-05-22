@@ -4,9 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,9 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class prepareBattleActivity extends AppCompatActivity {
+public class prepareBattle2Activity extends AppCompatActivity {
 
-    public static ArrayList<Ship> ships1 = new ArrayList<Ship>();
+    public static ArrayList<Ship> ships2 = new ArrayList<Ship>();
 
     int[] x1 = new int[3];
     int[] y1 = new int[3];
@@ -75,11 +75,11 @@ public class prepareBattleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(buttonShip1.getText().toString().equals("0")) {
-                    Intent intent = new Intent(prepareBattleActivity.this, prepareBattle2Activity.class);
-                    startActivity(intent);
-                    finish();
+                      Intent intent = new Intent(prepareBattle2Activity.this, battleActivity.class);
+                      startActivity(intent);
+                      finish();
                 }else{
-                    Toast.makeText(prepareBattleActivity.this, "Wciąż są statki w Twoim porcie. Wystaw je na pole bitwy!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(prepareBattle2Activity.this, "Wciąż są statki w Twoim porcie. Wystaw je na pole bitwy!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -92,7 +92,6 @@ public class prepareBattleActivity extends AppCompatActivity {
         button00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 if (x1[0] == 500 && y1[0] == 500) {
                     if (!blist.get(0)) {
@@ -128,7 +127,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -157,7 +156,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -203,7 +202,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -232,7 +231,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -243,7 +242,7 @@ public class prepareBattleActivity extends AppCompatActivity {
         button02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(prepareBattle2Activity.this, "Przycisk 02", Toast.LENGTH_SHORT).show();
 
                 if (x1[0] == 500 && y1[0] == 500) {
                     if (!blist.get(2)) {
@@ -279,7 +278,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -308,7 +307,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -355,7 +354,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -384,7 +383,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -431,12 +430,12 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
                     if (blist.get(4)) {
-                        Toast.makeText(prepareBattleActivity.this, "chuj", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(prepareBattle2Activity.this, "chuj", Toast.LENGTH_SHORT).show();
                         x2[0] = (button04.getId() / 10) % 10;
                         y2[0] = button04.getId() % 10;
 
@@ -460,7 +459,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -509,7 +508,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -538,7 +537,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -584,7 +583,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -613,7 +612,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -660,7 +659,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -689,7 +688,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -736,14 +735,14 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
                     if (blist.get(8)) {
 
-                        x2[0] =  (button13.getId() / 10) % 10;
-                        y2[0] =  button13.getId() % 10;
+                        x2[0] = (button13.getId() / 10) % 10;
+                        y2[0] = button13.getId() % 10;
 
 
                         if (buttonShip3.getText().toString().equals("1")) {
@@ -765,7 +764,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -812,7 +811,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -841,7 +840,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -891,7 +890,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -920,7 +919,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -966,7 +965,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -995,7 +994,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1042,7 +1041,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1071,7 +1070,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1118,7 +1117,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1147,7 +1146,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1194,7 +1193,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1223,7 +1222,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1274,7 +1273,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1303,7 +1302,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1349,14 +1348,14 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
                     if (blist.get(16)) {
 
-                        x2[0] = (button31.getId() / 10) % 10;
-                        y2[0] = button31.getId() % 10;
+                        x2[0] = (button11.getId() / 10) % 10;
+                        y2[0] = button11.getId() % 10;
 
 
                         if (buttonShip3.getText().toString().equals("1")) {
@@ -1378,7 +1377,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1425,7 +1424,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1454,7 +1453,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1501,7 +1500,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1530,7 +1529,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1577,7 +1576,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1606,7 +1605,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1654,7 +1653,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1683,7 +1682,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1729,7 +1728,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1758,7 +1757,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1805,7 +1804,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1834,7 +1833,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1881,7 +1880,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1910,7 +1909,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
@@ -1957,7 +1956,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             x1[0]=500; y1[0]=500;
                             int numberOfShips = Integer.valueOf(buttonShip1.getText().toString()) - 1;
                             buttonShip1.setText(String.valueOf(numberOfShips));
-                            ships1.add(new Ship(startButtonId, 0));
+                            ships2.add(new Ship(startButtonId, 0));
                         }
                     }
                 } else {
@@ -1986,7 +1985,7 @@ public class prepareBattleActivity extends AppCompatActivity {
                             int numberOfShips = Integer.valueOf(buttonShip2.getText().toString()) - 1;
                             buttonShip2.setText(String.valueOf(numberOfShips));
                         }
-                        ships1.add(new Ship(startButtonId, endButtonId));
+                        ships2.add(new Ship(startButtonId, endButtonId));
                     }
                 }
             }
