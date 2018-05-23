@@ -1354,8 +1354,8 @@ public class prepareBattle2Activity extends AppCompatActivity {
                 } else {
                     if (blist.get(16)) {
 
-                        x2[0] = (button11.getId() / 10) % 10;
-                        y2[0] = button11.getId() % 10;
+                        x2[0] = (button31.getId() / 10) % 10;
+                        y2[0] = button31.getId() % 10;
 
 
                         if (buttonShip3.getText().toString().equals("1")) {
