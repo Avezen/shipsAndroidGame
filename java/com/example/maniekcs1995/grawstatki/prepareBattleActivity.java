@@ -436,7 +436,6 @@ public class prepareBattleActivity extends AppCompatActivity {
                     }
                 } else {
                     if (blist.get(4)) {
-                        Toast.makeText(prepareBattleActivity.this, "chuj", Toast.LENGTH_SHORT).show();
                         x2[0] = (button04.getId() / 10) % 10;
                         y2[0] = button04.getId() % 10;
 

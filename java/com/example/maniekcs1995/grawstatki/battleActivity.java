@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -122,21 +122,18 @@ public class battleActivity extends AppCompatActivity {
                             sinkShip(500);
                         }
                     }else if (button00.getId() + 300 == prepareBattleActivity.ships1.get(i).getX()){
-                        Toast.makeText(battleActivity.this, "jedynka", Toast.LENGTH_SHORT).show();
                         button00.setBackgroundColor(Color.RED);
                         button00.setEnabled(false);
                         button00.setId(400);
                         battle2Activity.ship1Count--;
                         battle2Activity.buttonShip1.setText(String.valueOf(battle2Activity.ship1Count));
                     }else if (button00.getId() + 200 == prepareBattleActivity.ships1.get(i).getX()) {
-                        Toast.makeText(battleActivity.this, "jedynka", Toast.LENGTH_SHORT).show();
                         button00.setBackgroundColor(Color.RED);
                         button00.setEnabled(false);
                         button00.setId(300);
                         battle2Activity.ship1Count--;
                         battle2Activity.buttonShip1.setText(String.valueOf(battle2Activity.ship1Count));
                     }else if (button00.getId() + 100 == prepareBattleActivity.ships1.get(i).getX()) {
-                        Toast.makeText(battleActivity.this, "jedynka", Toast.LENGTH_SHORT).show();
                         button00.setBackgroundColor(Color.RED);
                         button00.setEnabled(false);
                         button00.setId(200);

@@ -242,7 +242,7 @@ public class prepareBattle2Activity extends AppCompatActivity {
         button02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(prepareBattle2Activity.this, "Przycisk 02", Toast.LENGTH_SHORT).show();
+
 
                 if (x1[0] == 500 && y1[0] == 500) {
                     if (!blist.get(2)) {
@@ -435,7 +435,7 @@ public class prepareBattle2Activity extends AppCompatActivity {
                     }
                 } else {
                     if (blist.get(4)) {
-                        Toast.makeText(prepareBattle2Activity.this, "chuj", Toast.LENGTH_SHORT).show();
+
                         x2[0] = (button04.getId() / 10) % 10;
                         y2[0] = button04.getId() % 10;
 
